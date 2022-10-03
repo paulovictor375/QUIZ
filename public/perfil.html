@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos de Perguntas - Teste seus conhecimentos</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/perfil.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    
+    <header>
+        <nav id="menu-h">
+            <div class="navmenu">
+                <ul class="list">
+                    <li><a href="/contato.html" class="btn btn-saiba">CONTATO</a></li> 
+                    <li><a href="/perfil.html" class="btn btn-perfil">PERFIL</a></li> 
+                    <li><a href="/jogo.html" class="btn btn-jogar">JOGAR</a></li>
+                    <li><a href="/" class="btn btn-home">JOGO DE PERGUNTAS</a></li>          
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <section class="secaoPerfil">
+            <div class="perfil-usuario">
+                <box class="box" >
+                    <div class="perfil"> 
+                        <div class="perfil-foto">
+                            <img class="avatar" src="images/soul.jpg" alt="avatar">
+                        </div>
+                        <input type="file" name="foto" id="foto">
+                        <label class="foto" for="foto"><i class='bx bx-image-alt'></i></label>
+                    </div>
+                    <div class="info">
+                        <div class="info-media">
+                            <form class="form" action="getform.php" method="get">
+                                <div class="campo1">
+                                    <label class="name2"><strong class="nome">Nome</strong></label>
+                                    <input rows="6" type="text" class="name" name="name" placeholder="Insira seu nome aqui">
+                                    <br>
+                                    <label class="email2"><strong class="email1">Email</strong></label>
+                                    <input rows="6" type="email" class="email" name="email" placeholder="Insira seu email aqui!">
+                                    <br>
+                                    <label for="datan2"><strong class="datan">Data de Nascimento</strong></label>
+                                    <input rows="6" type="date" class="datan1" name="datan1" placeholder="Ex.: 21/10/2000">
+                                    <br>
+                                    <label for="gener2"><strong class="gener1">Gênero</strong></label>
+                                    <select class="gener" required>
+                                        <option selected disabled value="">Selecione seu gênero</option>
+                                        <option value="masc">Masculino</option>
+                                        <option value="fem">Feminino</option>
+                                    </select>
+                                </div>
+                        <button class= button-dados type=text>Salvar</button>
+                            </form>
+                        </div>
+                    </form>
+                    </div>
+                </box>
+            </div>
+        </section>
+        <script type="text/javascript" src="/scripts/menu-responsivo.js"></script>
+        
+    </body>
+    </html>

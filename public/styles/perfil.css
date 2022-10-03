@@ -1,0 +1,340 @@
+.perfil-usuario{
+    display: flex;
+    justify-content: center;
+    top: 5px;
+    width: 750px;
+    height: 580px;
+    border-radius: 15px;
+    align-items: center;
+    background-color: rgba(121, 68, 134, 1);
+    padding: 160px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* left: 255px; */
+}
+.box{
+    color: white;
+    position: relative;
+    left: 100px;
+    bottom: -10px;
+}
+section.secaoPerfil{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.form{
+    width: 100%;
+    height: 55vh;
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 150px;
+    min-width: 150px;
+}
+
+.button-dados{
+    border-radius: 25px;
+    background-color: rgba(209, 134, 227, 1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: -18px;
+    margin-left: 350px;
+    border: none;
+    /* border-bottom: 2px solid #5b6b54ff; */
+    transition-duration: .5s;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    width: 180px;
+    position: relative;
+    bottom: 30px;
+}
+.button-dados:hover{
+    background-color:#ebf5d7;
+    border:#012e1bff;
+    color:rgb(127, 133, 125);
+    /* border-bottom: 2px solid #5b6b54ff; */
+
+}
+
+.perfil{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.perfil-foto{
+    display: flex;
+    width: 210px;
+    height: 210px;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid rgba(209, 134, 227, 1);
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, -2);
+    position:relative;
+    overflow: hidden;
+    margin-bottom: -20px;
+    left: -70px;
+}
+.info-media .nome{
+    display: flex;
+    align-items: center;
+
+}
+.info-media .email1{
+    display: flex;
+    align-items: center;
+
+}
+.info-media .datan1{
+    display: flex;
+    align-items: center;
+
+}
+.info-media .gener1{
+    display: flex;
+    align-items: center;
+}
+.info-media{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -220px;
+    margin-top: 10px;
+}
+.name{
+    padding-right: 400px;
+    align-items: center;
+    display:flex;
+    border-radius: 10px;
+    background-color:white ;
+    border-width: medium;
+    border-style: solid;
+    border-color:white ;
+
+}
+.datan1{
+    padding-right: 400px;
+    align-items: center;
+    display:flex;
+    border-radius: 10px;
+    background-color:white ;
+    border: none;
+    border-width: medium;
+    border-style: solid;
+    border-color:white ;
+}
+.gener1{
+    margin-top:25px;
+    position: relative;
+    bottom: 25px;
+}
+.gener{
+    position: relative;
+    left: -140px;
+    bottom: 25px;
+    padding-right: 100px;
+    margin-top: 0px;
+    align-items: center;
+    display:flex;
+    border-radius: 10px;
+    background-color:white ;
+    border: none;
+    border-width: medium;
+    border-style: solid;
+    border-color:white ;
+}
+.email{
+    padding-right: 400px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    border-radius: 10px;
+    background-color:white ;
+    border-width: medium;
+    border-style: solid;
+    border-color:white ;
+}
+.campo{
+    margin-top: 40px;
+}
+
+.campo1 input{
+    border-radius: 32px;
+    padding: 7px;
+    padding-left: 15px;
+    outline: none;
+    width: 100%;
+    transition: .7s ease-in-out;
+    border-bottom: 2px solid white;
+
+}
+.campo1 input:focus{
+    background-color: #e3eccf;
+}
+
+.campo1 select {
+    border-radius: 32px;
+    outline: none;
+    transition: .7s ease-in-out;
+}
+
+#foto{
+    display: none;
+}
+
+.foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(209, 134, 227, 1);
+    transition: 7s ease-in-out;
+    position: relative;
+    left: -90px;
+    top: 20px;
+} 
+
+.bx {
+    font-family:boxicons !important;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    speak-as: none;
+    -webkit-font-smoothing: antialiased;
+}
+.bx-image-alt{
+    font-size: 25px;
+    color: whitesmoke;
+}
+.bx-image-alt:before {
+    content: "\ed80";
+}
+
+/* Menu responsivo */
+
+@media screen and (max-width: 768px){
+
+    .perfil-usuario{
+        width: 100px;
+        height: 1000px;
+        top: 100px;
+        left: -22px;
+        display:flex;
+    }
+    .form{
+        position: relative;
+        left: -50px;
+    }
+    .box{
+        box-sizing: inherit;
+        padding-left: 10px;
+    }
+    .button-dados{
+        position: relative;
+        top: 100px;
+        left: 110px;
+    }
+    .email1{
+        position: relative;
+        left: 300px;
+
+    }
+    .email{
+        position: relative;
+        left: 470px;
+    }
+    .nome{
+        position: relative;
+        left: 470px;
+    }
+    .name{
+        position: relative;
+        left: 470px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .bio2{ 
+        position: relative;
+        left: 470px;
+    }
+    .bio3{
+        position: relative;
+        left: 470px;
+    }
+    .datan1{
+        position: relative;
+        left: 470px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .datan{
+        position: relative;
+        left: 470px;
+    }
+    .gener1{
+        margin-top: 0px;
+        margin-left:50px;
+    }
+    .gener{
+        position: relative;
+        left: 470px;
+    }
+    .tele{
+        position: relative;
+        left: 470px;
+    }
+    .tel{
+        position: relative;
+        left: 470px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .meu-perfil{
+        left: 300px;
+        top: 60px;
+        font-size: 30px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .foto{
+        position: relative;
+        left: 250px;
+    }
+    .info-media{
+        width:50%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .campo1 input, .bio3{
+        width: 80%;
+    }
+
+    .perfil-foto{
+        position: relative;
+        left: 250px;
+        width: 150px;
+        height: 150px;
+    }
+}

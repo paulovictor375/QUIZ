@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100&family=Roboto:wght@100;900&display=swap');
+
+:root{
+    --cor-fundo: rgba(209, 134, 227, 1);
+    --cor-barra: rgba(162, 99, 177, 1);
+    --cor-roxo-escuro: rgba(121, 68, 134, 1);
+}
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color:rgba(209, 134, 227, 1);
+}
+#menu-h ul{
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(162, 99, 177, 1);
+
+}
+
+#menu-h ul li{
+    display: inline;
+    
+}
+
+#menu-h ul li a{
+    font-weight: 700;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    transition: background .6s;
+
+    
+}
+#menu-h ul li a:hover{
+    background-color: rgba(121, 68, 134, 1);
+}
+#menu-h ul li:nth-child(1) a{
+    float: right;
+
+}
+#menu-h ul li:nth-child(2) a{
+    float: right;
+
+}
+#menu-h ul li:nth-child(3) a{
+    float: right;
+
+}
+
+.btn-jogar{
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

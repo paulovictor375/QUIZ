@@ -1,0 +1,40 @@
+token = {{login.response.body.token}}
+@host = http://localhost:3000
+
+
+###
+
+GET http://localhost:3000/questions
+
+### Valid Login
+
+# @name login
+POST {{host}}/signin
+Content-Type: application/json 
+
+
+{
+    "email": "luiz@email.com",
+    "password": "123"
+}
+
+### Invalid Login
+
+POST {{host}}/signin
+Content-Type: application/json
+
+{
+    "email": "fail@email.com",
+    "password": "123"
+} 
+
+### Create User
+
+POST {{host}}/users
+Content-Type: application/json
+
+{
+    "name": "Paulo",
+    "email": "paulo@email.com",
+    "password": "123"
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos de Perguntas - Teste seus conhecimentos</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    
+    <header>
+        <nav id="menu-h">
+            <div class="navmenu">
+                <ul class="list">
+                    <li><a href="/cadastro.html" class="btn btn-saiba">CADASTRO</a></li> 
+                    <li><a href="/login.html" class="btn btn-perfil">LOGIN</a></li> 
+                    <li><a href="/jogo.html" class="btn btn-jogar">JOGAR</a></li>
+                    <li><a href="/" class="btn btn-home">JOGO DE PERGUNTAS</a></li>            
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <body>
+            <section class="secaoPerfil">
+                <div class="perfil-usuario">
+                    <box class="box" >
+                        <div class="info">
+                            <div class="info-media">
+                                <form class="form" action="getform.php" method="get">
+                                    <div class="campo1">
+                                        <h1 class="cadastro">Fazer login</h1>
+                                        <label class="name2"><strong class="nome">Email</strong></label>
+                                        <input rows="6" type="email" class="name" name="email" placeholder="Insira seu email aqui">
+                                        <br>
+                                        <label class="email2"><strong class="email1">Senha</strong></label>
+                                        <input rows="6" type="password" class="name" name="password" placeholder="Insira sua senha">
+                                        
+                                    </div>
+                            <button class= button-dados type=text>Login</button>
+                                </form>
+                            </div>
+                        </form>
+                        </div>
+                    </box>
+                </div>
+            </section>
+
+           <script>
+    const form = document.querySelector('form');
+
+    form.onsubmit = (event) => {
+      event.preventDefault();
+
+      
+    };
+   </script>
+            <script type="module">
+                import Auth from './scripts/auth.js';
+            
+                const form = document.querySelector('form');
+            
+                function showToast(message) {
+                  document.querySelector('.toast-header strong').innerText = message;
+                  const toast = new bootstrap.Toast(document.querySelector('#liveToast'));
+                  toast.show();
+                }
+            
+                form.onsubmit = async (event) => {
+                  event.preventDefault();
+            
+                  const user = Object.fromEntries(new FormData(form));
+            
+                  const url = '/signin';
+            
+                  const configRequest = {
+                    method: 'post',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(user),
+                  };
+            
+                  const { auth, token } = await (await fetch(url, configRequest)).json();
+            
+                  if (auth) {
+                    Auth.signin(token);
+                  } else {
+                    showToast('Error no login');
+                  }
+                }
+              </script>
+        </body>
+        </html>

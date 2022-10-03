@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos de Perguntas - Teste seus conhecimentos</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/cadastro.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    
+    <header>
+        <nav id="menu-h">
+            <div class="navmenu">
+                <ul class="list">
+                    <li><a href="/cadastro.html" class="btn btn-saiba">CADASTRO</a></li> 
+                    <li><a href="/login.html" class="btn btn-perfil">LOGIN</a></li> 
+                    <li><a href="/jogo.html" class="btn btn-jogar">JOGAR</a></li>
+                    <li><a href="/" class="btn btn-home">JOGO DE PERGUNTAS</a></li>            
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <body>
+        <section class="secaoPerfil">
+            <div class="perfil-usuario">
+                <box class="box" >
+                    <div class="info">
+                        <div class="info-media">
+                            <form class="form" action="getform.php" method="get">
+                                <div class="campo1">
+                                    <h1 class="cadastro">Cadastra-se</h1>
+                                    <label class="name2"><strong class="nome">Nome</strong></label>
+                                    <input rows="6" type="text" class="name" name="name" placeholder="Insira seu nome aqui">
+                                    <br>
+                                    <label class="email2"><strong class="email1">Email</strong></label>
+                                    <input rows="6" type="email" class="name" name="email" placeholder="Insira seu email aqui">
+                                    <br>
+                                    <label class="email2"><strong class="email1">Senha</strong></label>
+                                    <input rows="6" type="password" class="name" name="password" placeholder="Insira sua senha aqui!">
+                                    <br>
+                                    <label class="email2"><strong class="email1">Confirmar senha</strong></label>
+                                    <input rows="6" type="password" class="name" name="password" placeholder="Insira sua senha novamente aqui!">
+                                    
+                                </div>
+                        <button class= button-dados type=text>Cadastrar</button>
+                            </form>
+                        </div>
+                    </form>
+                    </div>
+                </box>
+            </div>
+        </section>
+        <script type="text/javascript" src="/scripts/menu-responsivo.js"></script>
+
+    <script>
+    const form = document.querySelector('form');
+
+    form.onsubmit = (event) => {
+      event.preventDefault();
+
+      const user = Object.fromEntries(new FormData(form));
+
+      createUser(user);
+
+      location.href = '/login.html';
+    };
+
+    async function createUser(user) {
+      const url = '/users';
+
+      const config = {
+        method: 'post',
+        body: JSON.stringify(user),
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+      };
+
+      const newUser = await (await fetch(url, config)).json();
+
+      return newUser;
+    }
+  </script>
+        
+    </body>
+    </html>
